@@ -1,0 +1,149 @@
+body {
+    /* font-family: 'Microsoft YaHei'!important; */
+    overflow-y: hidden;    
+    background: #002b2b;
+}
+/* 左侧导航固定宽度 */
+#topMenu {   
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    // background: #ccc;
+    width: 100%;
+    height: 130px;
+    z-index: 1;
+
+    h1 {
+        text-align: center;
+        color: #fff;
+        font-size: 30px;
+        margin: 15px 0 20px;
+    }
+
+}
+
+/* 覆盖antd原始样式 */
+.ant-menu-inline, .ant-menu-vertical {
+    border-right: none;
+}
+.ant-menu-inline .ant-menu-selected, .ant-menu-inline .ant-menu-item-selected {
+    border-right: 3px solid #2db7f5;
+}
+.ant-menu-vertical > .ant-menu-item, .ant-menu-inline > .ant-menu-item, .ant-menu-item-group-list > .ant-menu-item, .ant-menu-vertical > .ant-menu-submenu > .ant-menu-submenu-title, .ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title, .ant-menu-item-group-list > .ant-menu-submenu > .ant-menu-submenu-title {
+    font-size: 14px;
+}
+.ant-menu-item .anticon, .ant-menu-submenu-title .anticon {
+    margin-right: 12px;
+}
+.ant-menu-item-selected.ant-menu-item {
+    background: #EAF8FE;
+}
+.ant-menu{
+    background: none;
+}
+.ant-menu-horizontal {
+    width: 270px;
+    margin: 0 auto;
+    color: #00f9ff;
+    border: none;
+    li{
+        width: 90px;
+    }
+    & > .ant-menu-item:hover{
+        border-bottom: none;
+        color: #fff;
+
+    }
+    &>.ant-menu-item-selected{
+        color: #fff;
+        border-bottom: none;
+        position: relative;
+        &::before{
+            content: '[ ·';
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        &::after{
+            content: '· ]';
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        &.ant-menu-item{
+            background: none;
+        }
+    }
+}
+
+
+.ant-radio-group-small .ant-radio-button-wrapper {
+    background: none;
+    color: #01f8fe;
+    border: none;
+}
+.ant-radio-group-small .ant-radio-button-wrapper:not(:first-child)::before{
+    background-color: initial;
+}
+.ant-radio-group-small .ant-radio-button-wrapper-checked {
+    background: #006462;
+    color: #fff;
+}
+.ant-radio-group-small .ant-radio-button-wrapper:first-child {
+    border-left: none;
+}
+.ant-radio-group-small .ant-radio-button-wrapper:hover,.ant-radio-group-small  .ant-radio-button-wrapper-focused {
+    color: #fff;
+}
+.ant-radio-group-small .ant-radio-button-wrapper-checked {
+    box-shadow: none;
+}
+.ant-radio-group-small .ant-radio-button-wrapper-checked:hover {
+    box-shadow: none;
+}
+
+.sel-warp{
+    .ant-select{
+        color: #01f8fe;
+    }
+    .ant-select-selection{
+        background-color: inherit;
+        border: none;
+    }
+    .ant-select-open .ant-select-selection{
+        box-shadow: none;
+    }
+    .ant-select-arrow{
+        color: #01f8fe;
+        top: 42%;
+    }
+}
+
+/* logo样式 */
+#logo {
+    display: block;
+    margin: 40px auto;
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+    -o-transition:all 1s;
+    -ms-transition:all 1s;
+    transition:all 1s;
+    &:hover {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg); 
+    }    
+}
+
+/* 右侧宽度自适应 */
+#mainWrap {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;    
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
